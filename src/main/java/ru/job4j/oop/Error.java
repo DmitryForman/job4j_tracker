@@ -31,6 +31,5 @@ public class Error {
         error3.printInfo();
         Error error4 = new Error(true, 3, "Error text 4");
         error4.printInfo();
-
     }
 }

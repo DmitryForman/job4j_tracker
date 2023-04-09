@@ -1,15 +1,16 @@
 package ru.job4j.checkstyle;
 
 public class Broken {
+    public static final String NEW_VALUE = "";
     private int sizeOfEmpty = 10;
     private String surname;
     private String name;
 
-    public void echo() {
-    }
-
     public Broken() {
 
+    }
+
+    public void echo() {
     }
 
     public void media(Object obj) {
@@ -21,8 +22,4 @@ public class Broken {
     public void method(int a, int b, int c, int d, int e, int f, int g) {
 
     }
-
-    public static final String NEW_VALUE = "";
-
-
 }

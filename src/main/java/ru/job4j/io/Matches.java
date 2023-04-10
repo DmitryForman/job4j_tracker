@@ -16,7 +16,7 @@ public class Matches {
             if (matches >= 1 && matches <= 3 && matches <= count) {
                 count = count - matches;
             } else {
-                System.out.println("Введите верное число - от 1 до 3 и не более остатка");
+                System.out.println("Введите число от 1 до 3 и не более остатка");
             }
         }
         if (!turn) {

@@ -7,12 +7,20 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class FactTest {
     @Test
-        public void whenException() {
-            IllegalArgumentException exception = assertThrows(
-                    IllegalArgumentException.class,
-                    () -> {
-                        Fact.calc(-1);
-                    });
-            assertThat(exception.getMessage()).isEqualTo("N could not be less than 0");
-        }
+    public void whenException() {
+        IllegalArgumentException exception = assertThrows(
+                IllegalArgumentException.class,
+                () -> {
+                    Fact.calc(-1);
+                });
+        assertThat(exception.getMessage()).isEqualTo("N could not be less than 0");
+    }
+
+    @Test
+    public void whenNoExeption() {
+        int n = 3;
+        int expected = 6;
+        int result = Fact.calc(n);
+        assertThat(expected).isEqualTo(result);
+    }
 }

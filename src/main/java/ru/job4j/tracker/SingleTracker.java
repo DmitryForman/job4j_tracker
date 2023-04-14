@@ -10,7 +10,7 @@ public final class SingleTracker {
 
     }
 
-    private static SingleTracker getInstanse() {
+    public static SingleTracker getInstanse() {
         if (instanse == null) {
             instanse = new SingleTracker();
         }
@@ -40,7 +40,4 @@ public final class SingleTracker {
     public boolean delete(int id) {
         return tracker.delete(id);
     }
-
-
-    /* Остальные методы из класса Tracker. */
 }

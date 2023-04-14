@@ -22,12 +22,9 @@ public class PasswordValidator {
         boolean hasLowCase = false;
         boolean hasDigit = false;
         boolean hasSpecial = false;
-        boolean isBetween = false;
+        boolean isBetween = password.toCharArray().length > 8 && password.toCharArray().length < 32;
 
         for (char symbol : password.toCharArray()) {
-            if (password.toCharArray().length > 8 && password.toCharArray().length < 32) {
-                isBetween = true;
-            }
             if (Character.isUpperCase(symbol)) {
                 hasUpCase = true;
             }
@@ -40,6 +37,7 @@ public class PasswordValidator {
             if (!Character.isLetterOrDigit(symbol)) {
                 hasSpecial = true;
             }
+            break;
         }
 
         if (!isBetween) {
